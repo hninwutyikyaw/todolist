@@ -33,7 +33,8 @@ const createLi = (text) => {
 };
 
 const addList = () => {
-  if (inputText.value) {
+  // The trim() method removes whitespace from both sides of a string
+  if (inputText.value.trim()) {
     lists.append(createLi(inputText.value));
     inputText.value = null;
   } else {
